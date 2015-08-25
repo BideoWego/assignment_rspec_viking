@@ -8,6 +8,7 @@ describe Warmup do
 	describe '#gets_shout' do
 		it 'receives #gets' do
 			expect(warmup).to receive(:gets).and_return('asdf')
+			allow(warmup).to receive(:puts)
 			warmup.gets_shout
 		end
 
